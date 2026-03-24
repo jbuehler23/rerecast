@@ -26,7 +26,7 @@ rfd = "0.15"
 thiserror = { version = "2", default-features = false }
 wgpu-types = { version = "27", default-features = false }
 base64 = { version = "0.22", default-features = false, features = ["alloc"] }
-glam = { version = "0.30", default-features = false }
+glam = { version = "0.32", default-features = false }
 libm = { version = "0.2", default-features = false }
 cosmic-text = { version = "0.14", default-features = false }
 tracing = { version = "0.1", default-features = false }
@@ -35,28 +35,29 @@ anyhow = { version = "1", default-features = false }
 
 # Bevy
 ## Bevy itself is only used in tests and examples, so we can use the default features.
-bevy = { version = "0.18", default-features = true }
+bevy = { git = "https://github.com/bevyengine/bevy", default-features = true }
 ## Actual crate code should only depend on bevy_ crates with default features disabled.
-bevy_reflect = { version = "0.18", default-features = false, features = [
+bevy_reflect = { git = "https://github.com/bevyengine/bevy", default-features = false, features = [
     "glam",
 ] }
-bevy_app = { version = "0.18", default-features = false }
-bevy_camera = { version = "0.18", default-features = false }
-bevy_light = { version = "0.18", default-features = false }
-bevy_remote = { version = "0.18", default-features = false }
-bevy_mesh = { version = "0.18", default-features = false }
-bevy_ecs = { version = "0.18", default-features = false }
-bevy_render = { version = "0.18", default-features = false }
-bevy_transform = { version = "0.18", default-features = false }
-bevy_asset = { version = "0.18", default-features = false }
-bevy_image = { version = "0.18", default-features = false }
-bevy_pbr = { version = "0.18", default-features = false }
-bevy_math = { version = "0.18", default-features = false }
-bevy_color = { version = "0.18", default-features = false }
-bevy_derive = { version = "0.18", default-features = false }
-bevy_platform = { version = "0.18", default-features = false }
-bevy_tasks = { version = "0.18", default-features = false }
-bevy_gizmos = { version = "0.18", default-features = false }
+bevy_app = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_camera = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_light = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_remote = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_mesh = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_ecs = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_render = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_transform = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_asset = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_image = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_pbr = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_material = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_math = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_color = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_derive = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_platform = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_tasks = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_gizmos = { git = "https://github.com/bevyengine/bevy", default-features = false }
 
 # Workspace crates
 rerecast = { version = "0.3", path = "crates/rerecast", default-features = false }
